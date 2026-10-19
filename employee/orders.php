@@ -1,19 +1,19 @@
 <?php
 session_start();
-include '../db_conn.php'; 
+include __DIR__ . '/../db_conn.php'; 
 
 // Set timezone to Philippines to ensure accurate time logs
 date_default_timezone_set('Asia/Manila');
 
 // 1. Security Check: Is user logged in?
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../login.php");
+    header("Location: /login.php");
     exit();
 }
 
 // 2. Role Check: Is this user actually an EMPLOYEE?
 if ($_SESSION['role'] !== 'employee') {
-    header("Location: ../index.php"); 
+    header("Location: /index.php"); 
     exit();
 }
 

@@ -1,10 +1,10 @@
 <?php
 session_start();
-include '../db_conn.php';
+include __DIR__ . '/../db_conn.php';
 
 // 1. Security Check: Employee Only
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'employee') {
-    header("Location: ../login.php");
+    header("Location: /login.php");
     exit();
 }
 

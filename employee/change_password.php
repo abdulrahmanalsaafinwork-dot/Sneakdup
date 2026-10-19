@@ -1,10 +1,10 @@
 <?php
 session_start();
-include '../db_conn.php';
+include __DIR__ . '/../db_conn.php';
 
 // 1. Security Check: Must be logged in as Employee
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'employee') {
-    header("Location: ../index.php");
+    header("Location: /index.php");
     exit();
 }
 
