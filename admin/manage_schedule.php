@@ -1,10 +1,10 @@
 <?php
 session_start();
-include '../db_conn.php';
+include __DIR__ . '/../db_conn.php';
 
 // Check if user is admin
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header("Location: ../login.php");
+    header("Location: /login.php");
     exit();
 }
 

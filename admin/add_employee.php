@@ -1,10 +1,10 @@
 <?php
 session_start();
-include '../db_conn.php'; 
+include __DIR__ . '/../db_conn.php'; 
 
 // --- SECURITY CHECK ---
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header("Location: ../index.php"); 
+    header("Location: /index.php"); 
     exit();
 }
 

@@ -1,10 +1,9 @@
-```php
 <?php
 session_start();
-require_once '../db_conn.php';
+require_once __DIR__ . '/../db_conn.php';
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: ../login.php');
+    header('Location: /login.php');
     exit;
 }
 
