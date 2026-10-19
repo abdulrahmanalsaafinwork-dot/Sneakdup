@@ -1,0 +1,10 @@
+# SneakDup Security .gitignore
+.env
+.env.*
+config.local.php
+error_log
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
